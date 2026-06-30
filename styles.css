@@ -1,0 +1,155 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #51715e 0%, #20352a 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    background-color: #002e6e; /* Azul corporativo Certus */
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+.logo {
+    height: 45px;
+    display: block;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #002e6e;
+    border-bottom: 2px solid #002e6e;
+    padding-bottom: 5px;
+}
+
+.btn-login {
+    background-color: #0070c0;
+    color: white;
+    text-decoration: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #005694;
+}
+
+/* SECCIÓN PRINCIPAL (HERO) */
+.hero-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #0d1f2d; /* Tono oscuro para el título principal */
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* BOTONES DE ACCESO */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+}
+
+.btn-primary {
+    background-color: #00828a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00828a;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.03);
+}
+
+/* CONTENEDOR DE LA IMAGEN DERECHA */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+}
