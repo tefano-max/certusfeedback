@@ -245,98 +245,150 @@ body {
         padding: 50px 20px;
     }
 }
-/* --- ESTILOS PÁGINA FEEDBACK --- */
+/* ==========================================
+   PÁGINA FEEDBACK DE DOCENTES 
+   ========================================== */
+
+/* Contenedor principal con fondo claro para contrastar con el fondo verde */
 .feedback-page-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: sans-serif; /* Cambia por tu fuente principal */
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fondo blanco para limpiar el verde de atrás */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Título principal elegante */
 .page-title {
     text-align: center;
-    color: #032b53; /* Tono azul oscuro de CERTUS */
-    margin-bottom: 40px;
+    color: #032b53; /* Azul CERTUS */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
 }
 
+/* Línea decorativa debajo del título */
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00c19c; /* Verde CERTUS */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Lista contenedora */
 .teachers-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 35px;
 }
 
-/* Fila que junta al docente y sus comentarios */
+/* Fila que fuerza al perfil a la izquierda y feedbacks a la derecha */
 .teacher-row {
     display: flex;
-    background-color: #f9f9f9;
+    flex-direction: row; /* Fuerza la alineación horizontal */
+    background-color: #f8fafc; /* Gris ultra claro y limpio */
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 25px;
+    border: 1px solid #e2e8f0;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Bloque del perfil del profesor */
+/* Efecto visual al pasar el mouse por la fila */
+.teacher-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Bloque izquierdo fija del perfil */
 .teacher-profile {
-    flex: 1;
+    flex: 0 0 220px; /* Ancho fijo para que no se comprima */
     text-align: center;
-    min-width: 200px;
 }
 
+/* Foto de perfil pulida */
 .teacher-img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #00c19c; /* Verde institucional del botón */
-    margin-bottom: 10px;
+    border: 4px solid #00c19c; /* Aro verde CERTUS */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
 }
 
 .teacher-profile h3 {
-    margin: 5px 0;
-    color: #333;
-    font-size: 1.1rem;
+    margin: 8px 0 4px 0;
+    color: #032b53;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .teacher-dept {
-    color: #777;
-    font-size: 0.9rem;
-    margin: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Contenedor derecho de los 3 feedbacks */
+/* Contenedor derecho para los 3 cuadros de feedback */
 .feedbacks-container {
-    flex: 3;
+    flex: 1; /* Ocupa todo el espacio restante a la derecha */
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 100%;
 }
 
-/* Tarjeta individual de feedback */
+/* Cuadros individuales de comentarios con diseño moderno */
 .feedback-card {
     background-color: #ffffff;
-    border-left: 5px solid #032b53;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    border-left: 5px solid #032b53; /* Barra azul de acento */
+    padding: 14px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    border-top: 1px solid #edf2f7;
+    border-right: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+    position: relative;
+}
+
+/* Ícono decorativo de comillas en cada cuadro */
+.feedback-card::before {
+    content: '"';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    font-size: 2rem;
+    color: #e2e8f0;
+    font-family: serif;
+    line-height: 1;
 }
 
 .feedback-card p {
     margin: 0;
     font-style: italic;
-    color: #444;
+    color: #334155; /* Texto oscuro legible */
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.5;
+    padding-left: 10px;
 }
 
-/* Responsivo para celulares */
+/* Diseño adaptativo para celulares */
 @media (max-width: 768px) {
     .teacher-row {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Se vuelve vertical en pantallas chicas */
+        gap: 20px;
+        padding: 20px;
     }
-    .feedbacks-container {
+    .teacher-profile {
         flex: none;
     }
 }
