@@ -245,3 +245,98 @@ body {
         padding: 50px 20px;
     }
 }
+/* --- ESTILOS PÁGINA FEEDBACK --- */
+.feedback-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: sans-serif; /* Cambia por tu fuente principal */
+}
+
+.page-title {
+    text-align: center;
+    color: #032b53; /* Tono azul oscuro de CERTUS */
+    margin-bottom: 40px;
+}
+
+.teachers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Fila que junta al docente y sus comentarios */
+.teacher-row {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    align-items: center;
+    gap: 30px;
+}
+
+/* Bloque del perfil del profesor */
+.teacher-profile {
+    flex: 1;
+    text-align: center;
+    min-width: 200px;
+}
+
+.teacher-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00c19c; /* Verde institucional del botón */
+    margin-bottom: 10px;
+}
+
+.teacher-profile h3 {
+    margin: 5px 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.teacher-dept {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Contenedor derecho de los 3 feedbacks */
+.feedbacks-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Tarjeta individual de feedback */
+.feedback-card {
+    background-color: #ffffff;
+    border-left: 5px solid #032b53;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.feedback-card p {
+    margin: 0;
+    font-style: italic;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .teacher-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .feedbacks-container {
+        flex: none;
+    }
+}
