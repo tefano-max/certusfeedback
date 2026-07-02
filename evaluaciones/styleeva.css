@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header{
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #ffd700;
+}
+
+main{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+h2{
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.descripcion{
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.resumen{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.card{
+    background: white;
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.card h3{
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 30px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th{
+    background: #003366;
+    color: white;
+}
+
+th,
+td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background: #f8f8f8;
+}
+
+tr:hover{
+    background: #eef5ff;
+}
+
+button{
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #004999;
+}
+
+footer{
+    margin-top: 40px;
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px){
+
+    .resumen{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+
+}
